@@ -1,0 +1,26 @@
+{
+  "name": "cyframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:dev:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser chrome --record",
+    "cy:stag:chrome": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser chrome --record",
+    "cy:dev:firefox": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser firefox --record",
+    "cy:stag:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser firefox --record",
+    "cy:headed": "cypress run --config baseUrl=http://devtodo.monfared.io/ --headed",
+    "cy:test": "cypress run --config baseUrl=http://devtodo.monfared.io/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/step_definitions/",
+    "nonGlobalStepDefinitions": false
+  },
+  "devDependencies": {
+    "cypress": "^12.9.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.3.0"
+  }
+}

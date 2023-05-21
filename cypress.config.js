@@ -14,7 +14,6 @@ module.exports = defineConfig({
       );
       preprocessor.addCucumberPreprocessorPlugin(on, config);
       require('cypress-mochawesome-reporter/plugin')(on);
-      // Make sure to return the config object as it might have been modified by the plugin.
       return config;
     },
     specPattern: '**/*.feature',
@@ -30,6 +29,5 @@ module.exports = defineConfig({
       saveAllAttempts: false,
     },
     projectId: "4min37"
-
   },
 });

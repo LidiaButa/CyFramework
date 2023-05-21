@@ -1,15 +1,14 @@
-import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
 import TodoPage from '../../e2e/pages/todoPage/todoPage'
 
 const todoPage = new TodoPage()
 
 Given('I open the Todo page app', () => {
-    cy.visit('/')
-    // cy.visit('http://stagtodo.monfared.io/')
+    //cy.visit('/')
+    cy.visit('http://stagtodo.monfared.io/')
     cy.contains('Environment Todo')
-  }
-  )
+  })
 
 When(
     'I add a todo with text {string}',
@@ -26,7 +25,8 @@ When(
     }
   )
 
-Then('Verify last todo to match {string}', (value) => {
+Then(
+    'Verify last todo to match {string}', (value) => {
       todoPage.getLastTodoText().then((text) => {
         expect(text).to.include(value)
       })

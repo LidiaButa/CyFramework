@@ -29,7 +29,7 @@ module.exports = defineConfig({
       inlineAssets: true,
       saveAllAttempts: false,
     },
-    projectId: "qrq1nw"
+    projectId: "4min37"
 
   },
 });
